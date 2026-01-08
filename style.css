@@ -15,7 +15,7 @@ body {
     background: radial-gradient(circle at center, #1e1b4b 0%, #020024 100%);
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     /* Locked initially */
     height: 100vh;
 }

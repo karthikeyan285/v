@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday V! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Stars -->
+    <div id="stars-container"></div>
+
+    <!-- Background Clouds -->
+    <div id="clouds-container"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <!-- Placeholder music -->
+        <source src="https://assets.mixkit.co/music/preview/mixkit-upbeat-happy-birthday-3333.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="music-controls" class="hidden">
+        <button id="music-btn">🎵</button>
+    </div>
+
+    <!-- Intro Section (Countdown + Reveal) -->
+    <section id="intro-section" class="scene">
+        <div id="countdown-container">
+            <div id="countdown-number">3</div>
+        </div>
+
+        <div id="burst-overlay"></div>
+
+        <div id="reveal-container" class="hidden">
+            <h1 class="birthday-text">Happy Birthday<br><span class="highlight-name">Varsha</span></h1>
+            <div class="emoji-decorations">
+                <span class="emoji floating">🎉</span>
+                <span class="emoji floating delay-1">🎂</span>
+                <span class="emoji floating delay-2">💙</span>
+                <span class="emoji floating delay-3">✨</span>
+            </div>
+            <p class="emotional-subtext">May your year be as bright as the stars ✨</p>
+            <!-- <div class="scroll-hint hidden">Scroll Down ↓</div> -->
+        </div>
+    </section>
+
+    <!-- Cake Section -->
+    <section id="cake-section" class="scene content-scene">
+        <h2 class="section-title">Step 1: Make a Wish</h2>
+        <div class="cake-container">
+            <div class="cake">
+                <div class="plate"></div>
+                <div class="layer layer-bottom"></div>
+                <div class="layer layer-middle"></div>
+                <div class="layer layer-top"></div>
+                <div class="icing"></div>
+                <div class="drip drip1"></div>
+                <div class="drip drip2"></div>
+                <div class="drip drip3"></div>
+                <div class="candle" id="candle">
+                    <div class="flame" id="flame"></div>
+                </div>
+            </div>
+        </div>
+        <p class="instruction-text" id="candle-instruction">Tap the candle to blow it out 💨</p>
+    </section>
+
+    <!-- Photo Memories Section -->
+    <section id="memories-section" class="scene content-scene">
+        <h2 class="section-title">Happy Birthday Memories 💙</h2>
+        <div class="accordion-container">
+            <!-- Card 1 -->
+            <div class="card active">
+                <img src="./images/v1.jpg" alt="Adventure">
+                <div class="card-content">
+                    <h3>Happy Birthday V 🎉</h3>
+                    <p>Adventure awaits! 🏔️</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="./images/v2.jpg" alt="Celebration">
+                <div class="card-content">
+                    <h3>Happy Birthday V 🎉</h3>
+                    <p>Shine bright like a diamond ✨</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="./images/v3.jpg" alt="Beach">
+                <div class="card-content">
+                    <h3>Happy Birthday V 🎉</h3>
+                    <p>Peace & Serenity 🌊</p>
+                </div>
+            </div>
+            <!-- Reuse images for 7 cards total -->
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="./images/v4.jpg" alt="Travel">
+                <div class="card-content">
+                    <h3>Happy Birthday V 🎉</h3>
+                    <p>To new heights! 🚀</p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="./images/v2.jpg" alt="Party">
+                <div class="card-content">
+                    <h3>Happy Birthday V 🎉</h3>
+                    <p>Let's celebrate! 🥂</p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="./images/v22.jpg" alt="Night">
+                <div class="card-content">
+                    <h3>Happy Birthday V 🎉</h3>
+                    <p>Dream big 💫</p>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <!-- <div class="card">
+                <img src="./images/memory7.jpg" alt="Friends">
+                <div class="card-content">
+                    <h3>Happy Birthday V 🎉</h3>
+                    <p>Friends forever 💙</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section id="final-section" class="scene content-scene">
+        <div class="final-content">
+            <h1 class="final-title">Happy Birthday V 🎉</h1>
+            <p class="final-message-para">
+                Here's to another year of laughing at our own jokes and keeping each other sane! <br>
+                You deserve all the cake, love, and happiness today. 💙
+            </p>
+            <div class="floating-hearts">
+                <span>💙</span><span>✨</span><span>🎂</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wish Section -->
+    <section id="wish-section" class="scene content-scene">
+        <div class="glass-card hidden-fade">
+            <h2 class="wish-heading">One Last Question for You 💙</h2>
+            <p class="wish-subtext">Tell me what kind of gift you want… I promise I’ll buy it and give it to you
+                whenever we meet 🤍</p>
+
+            <form id="wish-form">
+                <textarea id="wish-message" placeholder="Write your dream gift here..." required></textarea>
+                <button type="submit" id="wish-submit-btn">Send My Wish ✨</button>
+            </form>
+
+            <div id="wish-success" class="hidden">
+                <p>Your wish is safely sent 💌 I’ll remember it forever.</p>
+            </div>
+
+            <p class="wish-footer">I can’t wait to see you and give this to you 🥹💙</p>
+
+            <div class="wish-decorations">
+                <span class="float-emoji">💙</span>
+                <span class="float-emoji">✨</span>
+                <span class="float-emoji">🎂</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
